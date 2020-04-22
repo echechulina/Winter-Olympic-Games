@@ -1,22 +1,35 @@
-new Chart(document.getElementById('barChartHorizontal'), {
+var updatingChart = new Chart(document.getElementById('barChartHorizontal'), {
 	type: 'horizontalBar',
 	data: {
-		labels: ['AUT','BEL','CAN','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
+		labels: ['AUT','BEL','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
 		datasets: [{
 			label: 'Full number',
 			backgroundColor: ['#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd'],
-			data: [280, 13, 625, 434, 152, 79, 457, 285, 433, 653],
+			data: [280, 13, 434, 152, 79, 457, 285, 433, 653],
 		}]
 	},
 	options: {
 		legend: {
 			display:false
+		},
+		animation: {
+			duration: '2000',
+			easing: 'easeInOutQuad'
 		}
-
 	}
 
 });
 
+function addData(chart, label, data, backgroundColor) {
+	chart.data.labels.push(label);
+	chart.data.datasets[0].data.push(data);
+	chart.data.datasets[0].backgroundColor.push(backgroundColor);
+	chart.update();
+}
+
+setTimeout(function () {
+addData(updatingChart, 'CAN', 625, '#8e5ea2')
+}, 3000);
 
 
 new Chart(document.getElementById('pieChart'), {
@@ -31,6 +44,11 @@ new Chart(document.getElementById('pieChart'), {
 	options: {
 		legend: {
 			display:true,
+		},
+
+		animation: {
+			duration: '2000',
+			easing: 'easeOutCirc'
 		}
 
 	}
@@ -52,6 +70,10 @@ new Chart(document.getElementById('lineChart'), {
 	options: {
 		legend: {
 			display:false,
+		},
+		animation: {
+			duration: '2000',
+			easing: 'easeInOutExpo'
 		}
 	}
 });
@@ -76,6 +98,11 @@ new Chart(document.getElementById('barChartVertical'), {
 	options: {
 		legend: {
 			display:true,
+		},
+
+		animation: {
+			duration: '2000',
+			easing: 'easeInOutBack'
 		}
 	}
 });
@@ -117,6 +144,11 @@ new Chart(document.getElementById('multigraphChart'), {
 	options: {
 		legend: {
 			display:true,
+		},
+
+		animation: {
+			duration: '2000',
+			easing: 'easeInBounce'
 		}
 	}
 });
