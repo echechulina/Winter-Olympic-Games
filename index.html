@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Winter Olympic Games</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+	<div class="container">
+		<h1 class="hidden">Winter Olympic Games</h1>
+
+		<header class="mainHeader">
+			<section class="siteName">
+			<h2>The success of the Canadian team</h2> 
+				<h2>in the Winter Olympic Games</h2>
+			</section>
+			<div class="socialMedia">
+        		<h2 class="hidden">Social Media</h2>
+        		<ul id="iconNav">
+            		<li id="facebook">
+            			<a href="https://www.facebook.com/teamcanada">
+                			<img src="images/facebook.png" alt="facebook">
+              			</a>
+            		</li>
+
+           			 <li id="instagram">
+              			<a href="https://www.instagram.com/teamcanada/">
+                			<img src="images/instagram.png" alt="instagram">
+              			</a>
+            		</li>
+  				</ul>
+     		 </div> 
+		</header>
+
+		<div class="firstPart">
+			<section class="titleBackground">
+				<h2 class="hidden">titleBackground</h2>
+				<section class="title">
+					<h2>Canada in the global classification</h2>	
+				</section>
+			</section>
+
+			<section class="description">
+				<h2 class="hidden">Description</h2>
+				<section class="leftContainer">
+					<h2 class="hidden">Left container</h2>
+					<p>The first Winter Olympics Games took place in 1924. Canada among other ten coutries partcipated in this historic event and contiues to take part until now. Using the graph "The total number of medals from 1924 to 2014" you can find the information about the total score of each of the country that started their Olympic way in 1924.</p>
+				</section>
+
+				<section class="rightContainer">
+					<h2 class="hidden">Right container</h2>
+					<p>The pie chart "The number of medals of various kinds" shows the full amount of different kinds of won medals. It allows to see the great talant of Canadian athletes.</p>
+				</section>
+			</section>
+
+			<section class="graphName">
+				<h3>The total number of medals from 1924 to 2014</h3>	
+			</section>
+
+			<canvas id="barChartHorizontal"></canvas>
+
+			<section class="graphName">
+				<h3>The number of medals of various kinds</h3>	
+			</section>
+
+
+			<canvas id="pieChart"></canvas>	
+		</div>
+
+		<div class="secondPart">
+			<section class="titleBackground">
+				<h2 class="hidden">titleBackground</h2>
+			<section class="title">
+				<h2>Dynamics of results</h2>	
+			</section>
+		</section>
+
+			<section class="description">
+				<h2 class="hidden">Description</h2>
+				<section class="leftContainer">
+					<h2 class="hidden">Left container</h2>
+					<p>Due to the measures of the Government of Canada aimed at developing and supporting the sports sector, the number of Olympic medals grew each game.</p>
+				</section>
+
+				<section class="rightContainer">
+					<h2 class="hidden">Right container</h2>
+					<p>The leaders in the number of medals in various sports are mainly men, but women athletes made a sinificant contribution to the team score.</p>
+				</section>
+			</section>
+
+			<section class="graphName">
+				<h3>Statistics of victories at the Olympic Games</h3>	
+			</section>
+
+
+			<canvas id="lineChart"></canvas>
+
+			<section class="graphName">
+				<h3>Statistics of victories of men and women in different kinds of sports</h3>	
+			</section>
+
+
+			<canvas id="barChartVertical"></canvas>	
+		</div>
+
+		<div class="thirdPart">
+			<section class="titleBackground">
+				<h2 class="hidden">titleBackground</h2>
+				<section class="title">
+					<h2>Female contributions</h2>	
+				</section>
+			</section>
+
+			<section class="description">
+				<h2 class="hidden">Description</h2>
+				<section class="leftContainer">
+					<h2 class="hidden">Left container</h2>
+					<p> Canadian female athletes participate in the Winter Olympic Games 24 years less than men. Nevertheless, due to the perseverance, courage of athletes and the support from the Canadian Government and citizens, Canadian women athletes have achieved tremendous success.</p>
+				</section>
+				<section class="rightContainer">
+					<h2 class="hidden">Right container</h2>
+					<p>Canadian Female athletes showed incredible results and despite the fact that they participated in competitions less, they earned about 38% of the total number of medals.</p>
+				</section>
+			</section>
+
+			<section class="graphName">
+				<h3>The influence of women on the number of victories in the Olympic Games</h3>	
+			</section>
+
+
+			<canvas id="multigraphChart"></canvas>
+		</div>
+
+		<footer class="mainFooter">
+			<section id="footerTitle">
+				<h2 class="hidden">footerBackground</h2>
+			<h3>Citus, Altius, Fortius!</h3>
+		</section>
+		</footer>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
