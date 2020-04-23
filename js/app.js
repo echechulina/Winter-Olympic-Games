@@ -4,7 +4,7 @@ var updatingChart = new Chart(document.getElementById('barChartHorizontal'), {
 		labels: ['AUT','BEL','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
 		datasets: [{
 			label: 'Full number',
-			backgroundColor: ['#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd','#3e95cd'],
+			backgroundColor: ['#ffd166','#06d6a0','#a5668b','#35a7ff','#ee6c4d','#3a6ea5','#fca311','#7bdff2','#aaf683'],
 			data: [280, 13, 434, 152, 79, 457, 285, 433, 653],
 		}]
 	},
@@ -24,11 +24,11 @@ function addData(chart, label, data, backgroundColor) {
 	chart.data.labels.push(label);
 	chart.data.datasets[0].data.push(data);
 	chart.data.datasets[0].backgroundColor.push(backgroundColor);
-	chart.update();
+	chart.update();   
 }
 
 setTimeout(function () {
-addData(updatingChart, 'CAN', 625, '#8e5ea2')
+addData(updatingChart, 'CAN', 625, '#f94144');
 }, 3000);
 
 
@@ -37,7 +37,7 @@ new Chart(document.getElementById('pieChart'), {
 	data: {
 		labels: ['Gold','Silver','Bronze'],
 		datasets: [{
-			backgroundColor: ['#3e95cd','#8e5ea2', '#e8c3b9'],
+			backgroundColor: ['#eed317','#aeb7b3', '#76520e'],
 			data: [315,203,107],
 		}]
 	},
@@ -64,7 +64,7 @@ new Chart(document.getElementById('lineChart'), {
 			label: 'Number of medals',
 			data: [9,12,20,13,20,17,20,21,7,20,1,3,2,4,6,37,40,49,75,68,91,90],
 			fill: false,
-			borderColor: '#3e95cd'
+			borderColor: '#f94144'
 		}]
 	},
 	options: {
@@ -87,12 +87,12 @@ new Chart(document.getElementById('barChartVertical'), {
 		datasets: [{
 			label: 'Female athletes',
 			data: [3,7,25,101,77,26,],
-			backgroundColor:'#3e95cd',
+			backgroundColor:'#ff595e',
 		},
 		{
 			label: 'Male athletes',
 			data: [0,15,25,250,82,14],
-			backgroundColor:'#8e5ea2',
+			backgroundColor:'#1982c4',
 		}]
 	},
 	options: {
@@ -115,19 +115,19 @@ new Chart(document.getElementById('multigraphChart'), {
 			label: 'Number of victories',
 			data: [20,17,20,7,20,1,3,6,40,49,68,91,90],
 			backgroundColor: [
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
-			'rgb(255,192,203, 0.2)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)',
+			'rgb(67,35,113, 0.5)'
 			]
 		},	
 
@@ -136,7 +136,7 @@ new Chart(document.getElementById('multigraphChart'), {
 			type: 'line',
 			fill: false,
 			data: [2,2,2,2,2,1,2,4,7,10,33,37,47,44,44],
-			borderColor: '#3e95cd',
+			borderColor: '#ff595e',
 			backgroundColor:'#8e5ea2'
 
 		}]
